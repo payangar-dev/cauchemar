@@ -1,0 +1,35 @@
+services:
+  mc:
+    container_name: cauchemar
+    image: itzg/minecraft-server
+    environment:
+      TYPE: MODRINTH
+      VERSION: "1.20.1"
+      EULA: true
+
+      INIT_MEMORY: 6G
+      MEMORY: 12G
+      USE_AIKAR_FLAGS: true
+
+      PVP: true
+      ALLOW_FLIGHT: true
+      ENABLE_COMMAND_BLOCK: true
+      DIFFICULTY: "normal"
+      MOTD: "Ton pire cauchemar"
+
+      MODRINTH_MODPACK: ${MODRINTH_MODPACK}
+    networks:
+      - proxy
+    ports:
+      - "25565:25565"
+      - "8080:8080"
+    volumes:
+      - ./data:/data
+      - ./server.mrpack:/server.mrpack
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+networks:
+  proxy:
+    external: true
+    name: proxy-network
