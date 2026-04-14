@@ -1,0 +1,28 @@
+# Godot 4+
+.godot/
+/android/
+/build/
+/export/
+*.translation
+
+# Exports Godot (binaires générés)
+*.exe
+*.pck
+*.zip
+export_presets.cfg
+
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Éditeurs / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Claude Code — local uniquement
+.claude/settings.local.json

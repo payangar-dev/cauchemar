@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "skills": {
+    "game-audio": {
+      "source": "omer-metin/skills-for-antigravity",
+      "sourceType": "github",
+      "computedHash": "314718e38c121814e8c116234f6dea5789cd4ed68c8c2fc51a1c9e565bf48a08"
+    },
+    "game-design-theory": {
+      "source": "pluginagentmarketplace/custom-plugin-game-developer",
+      "sourceType": "github",
+      "computedHash": "60a7ad8dd95255ed22840e03d44fdee8be919a19471f723d509da7c43b7bf21b"
+    },
+    "godot-asset-generator": {
+      "source": "jwynia/agent-skills",
+      "sourceType": "github",
+      "computedHash": "b935e212864ec0ad1429a7b341b6bbec544ff8f55e34644247e12abe13e79ea1"
+    },
+    "godot-best-practices": {
+      "source": "jwynia/agent-skills",
+      "sourceType": "github",
+      "computedHash": "f4f741553ed4ad952312e0783f5a63a9755a442b9e8cfe670dd0c85cf273f268"
+    },
+    "godot-gdscript-patterns": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "3771d32765372adae744372c1440ae6329fc70323c238efac30d4bb43562f06b"
+    },
+    "godot-optimization": {
+      "source": "zate/cc-godot",
+      "sourceType": "github",
+      "computedHash": "d56e83fae6b3778d9ac20d49e16191ba2d85a7e3b5dae453e5d9654096d0e4da"
+    },
+    "godot-ui": {
+      "source": "zate/cc-godot",
+      "sourceType": "github",
+      "computedHash": "0ed46667be618a59b0f0072f2a6ed98cbe439c71eb300156ad4158b11a5b2c2d"
+    },
+    "level-design": {
+      "source": "pluginagentmarketplace/custom-plugin-game-developer",
+      "sourceType": "github",
+      "computedHash": "4c58cdced3facb1881aecb1fa4030ad3c6e8ffbad930d8a7d3c7500e6cb2958e"
+    },
+    "shader-fundamentals": {
+      "source": "bbeierle12/skill-mcp-claude",
+      "sourceType": "github",
+      "computedHash": "647c480ba46b5d65a684c27519fc617a4d710ddffed152d323b20c1c5e839e59"
+    }
+  }
+}
