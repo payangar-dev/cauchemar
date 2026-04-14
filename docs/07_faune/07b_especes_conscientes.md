@@ -37,6 +37,7 @@ Les espèces conscientes peuvent interagir avec l'environnement de manière inte
 - **Créer du bruit** : faire tomber un objet dans une direction pour attirer les joueurs vers un piège.
 - **Ouvrir des portes** : les portes fermées ne sont pas un obstacle.
 - **Détruire des cachettes** : retourner des tables, ouvrir des placards, arracher des planches.
+- **Manipuler un sac abandonné** : un sac à dos laissé au sol par un joueur (voir [10_ui_hud.md](../10_ui_hud.md)) peut être retourné, déplacé, ou utilisé comme appât. La créature comprend qu'un joueur viendra probablement le récupérer et peut tendre une embuscade à proximité.
 
 ### Imitation
 

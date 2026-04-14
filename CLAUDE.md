@@ -43,6 +43,7 @@ Toute la documentation de design du jeu se trouve dans `docs/`. Voici la structu
 ### Systèmes transversaux
 - `docs/08_multijoueur.md` — Coop 1-8, portail, décollage, communication, rôle émergent au vaisseau, récupération des corps, caméras
 - `docs/09_design_sonore.md` — Sons honnêtes uniquement, ambiance vs gameplay, son spatial, bruit du joueur, son comme outil de survie
+- `docs/10_ui_hud.md` — UI diégétique sur la visière, minimalisme, états de la visière (perturbée/endommagée/détruite), sac à dos physique abandonnable, bip de localisation
 
 ## Conventions de la documentation
 

@@ -13,6 +13,10 @@ Chaque joueur possède un inventaire personnel limité en nombre de slots. Les m
 
 ---
 
+## Le sac à dos
+
+L'inventaire n'est pas un menu abstrait : c'est un **sac à dos physique** que le joueur porte. Pour y accéder, il doit le **poser devant lui** et l'ouvrir. Les objets à l'intérieur sont des objets 3D manipulables. Le joueur est immobile pendant qu'il manipule le sac, le monde continue à tourner autour de lui, et le sac peut être **abandonné** au sol — où il reste accessible aux coéquipiers et aux créatures. Un joueur sans sac ne peut porter que ce qu'il tient dans ses mains. Voir [10_ui_hud.md](../10_ui_hud.md) pour la mécanique complète du sac.
+
 ## Slots d'inventaire
 
 - L'inventaire du joueur est composé d'un nombre limité de **slots** (nombre exact à définir).
