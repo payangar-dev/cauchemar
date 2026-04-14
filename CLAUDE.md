@@ -4,6 +4,25 @@
 
 Cauchemar est un jeu d'horreur coopératif (1-8 joueurs) avec des missions sur des planètes générées procéduralement. Le joueur est impuissant face aux menaces : pas d'armes, fuir ou se cacher uniquement.
 
+## Structure du dépôt
+
+Le dépôt est organisé en trois espaces principaux :
+
+- `game/` — Projet Godot 4 (contient `project.godot`). Toute la logique, les scènes et les assets importés par Godot vivent ici.
+- `source_assets/` — Fichiers sources bruts (`.blend`, `.psd`, audio non compressé, références…) **hors** du projet Godot, pour ne pas alourdir son pipeline d'import. Exportés vers `game/` sous forme utilisable (`.gltf`, `.png`, `.ogg`).
+- `docs/` — Documentation de design (GDD).
+
+### Organisation du projet Godot (`game/`)
+
+Le code et les assets sont organisés **par feature** (domaine gameplay), pas par type de fichier. Chaque feature contient tout ce qui lui est propre : scènes, scripts, modèles, textures, sons, classes `Resource` et instances `.tres`. Pas de dossier central `scripts/`, `assets/`, `resources/`, `autoloads/` — chaque chose vit dans la feature à laquelle elle appartient.
+
+- `game/addons/` — Plugins Godot (emplacement imposé par l'éditeur).
+- `game/player/` — Joueur : combinaison, visière/HUD diégétique, inventaire, navigation.
+- `game/creatures/` — Faune : animaux, espèces conscientes, parasites.
+- `game/sandbox/` — Scènes de test / prototypage (dev uniquement, hors build final).
+
+De nouvelles features seront ajoutées au fur et à mesure (ex : `world/`, `missions/`, `ship_station/`, `systems/`…). Un dossier `shared/` ne sera créé que si une ressource est vraiment partagée entre plusieurs features. Les autoloads sont des scripts vivant dans leur feature, simplement référencés dans `project.godot`.
+
 ## Documentation de design
 
 Toute la documentation de design du jeu se trouve dans `docs/`. Voici la structure :
