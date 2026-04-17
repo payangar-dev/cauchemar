@@ -24,6 +24,8 @@ Desktop.ini
 # Éditeurs / IDE
 .vscode/*
 !.vscode/launch.json
+game/.vscode/*
+!game/.vscode/launch.json
 .idea/
 *.swp
 *.swo
