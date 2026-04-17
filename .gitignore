@@ -4,6 +4,10 @@
 /build/
 /export/
 *.translation
+*.godot
+!game/project.godot
+main.tscn
+!game/main.tscn
 
 # Exports Godot (binaires générés)
 *.exe
@@ -18,7 +22,8 @@ Desktop.ini
 .DS_Store
 
 # Éditeurs / IDE
-.vscode/
+.vscode/*
+!.vscode/launch.json
 .idea/
 *.swp
 *.swo
