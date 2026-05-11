@@ -10,6 +10,7 @@ extends StaticBody3D
 @onready var emotions: EmotionalState = $EmotionalState
 @onready var _debug_provider: EmotionDebugProvider = $EmotionDebugProvider
 
+
 func _ready() -> void:
 	add_to_group(&"debug_inspectable")
 	_debug_provider.state = emotions

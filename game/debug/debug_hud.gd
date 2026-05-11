@@ -32,23 +32,28 @@ var current_target: Node3D = null
 
 @onready var _marker: CanvasItem = $Marker
 
+
 func _ready() -> void:
 	_marker.visible = active
+
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed(TOGGLE_ACTION):
 		active = not active
+
 
 func _physics_process(_delta: float) -> void:
 	if not active:
 		return
 	_set_target(_raycast_pick())
 
+
 func _set_target(target: Node3D) -> void:
 	if target == current_target:
 		return
 	current_target = target
 	target_changed.emit(target)
+
 
 func _raycast_pick() -> Node3D:
 	var viewport := get_viewport()

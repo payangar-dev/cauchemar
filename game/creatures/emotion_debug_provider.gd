@@ -31,6 +31,7 @@ var state: EmotionalState:
 var _dirty: bool = false
 var _last_emit_msec: int = 0
 
+
 func _process(_delta: float) -> void:
 	if not _dirty:
 		return
@@ -41,6 +42,7 @@ func _process(_delta: float) -> void:
 	_last_emit_msec = now
 	changed.emit()
 
+
 func get_debug_lines() -> PackedStringArray:
 	var lines := PackedStringArray()
 	lines.append("[Emotions]")
@@ -50,6 +52,7 @@ func get_debug_lines() -> PackedStringArray:
 	for e in Emotion.ALL:
 		lines.append("  %s: %.1f" % [Emotion.NAMES[e], state.get_emotion(e)])
 	return lines
+
 
 func _on_emotion_changed(_emotion: int, _old: float, _new: float) -> void:
 	_dirty = true
