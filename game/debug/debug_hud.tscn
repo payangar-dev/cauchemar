@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://debug/debug_hud.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://debug/debug_panel.tscn" id="2_panel"]
+
+[node name="DebugHud" type="CanvasLayer"]
+layer = 128
+script = ExtResource("1_script")
+
+[node name="Marker" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 120.0
+offset_bottom = 30.0
+text = "DEBUG"
+theme_override_colors/font_color = Color(1, 0.6, 0.2, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+visible = false
+
+[node name="DebugPanel" parent="." instance=ExtResource("2_panel")]

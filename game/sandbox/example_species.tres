@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="SpeciesProfile" format=3 uid="uid://xq5ets61k8cr"]
+
+[ext_resource type="Script" uid="uid://dwpgd7sovd60q" path="res://creatures/species_profile.gd" id="1_profile"]
+[ext_resource type="Script" uid="uid://b32wmwnm7j8ww" path="res://creatures/emotion_config.gd" id="2_config"]
+
+[sub_resource type="Resource" id="anger"]
+script = ExtResource("2_config")
+decay_rate = 5.0
+
+[sub_resource type="Resource" id="curiosity"]
+script = ExtResource("2_config")
+rest_target = 15.0
+decay_rate = 2.0
+
+[sub_resource type="Resource" id="energy"]
+script = ExtResource("2_config")
+initial = 50.0
+rest_target = 100.0
+decay_rate = 4.0
+
+[sub_resource type="Resource" id="fear"]
+script = ExtResource("2_config")
+initial = 30.0
+decay_rate = 3.0
+
+[sub_resource type="Resource" id="hunger"]
+script = ExtResource("2_config")
+rest_target = 100.0
+decay_rate = 2.0
+
+[sub_resource type="Resource" id="territorial"]
+script = ExtResource("2_config")
+decay_rate = 2.0
+
+[resource]
+script = ExtResource("1_profile")
+species_name = &"example"
+anger = SubResource("anger")
+fear = SubResource("fear")
+hunger = SubResource("hunger")
+energy = SubResource("energy")
+territorial = SubResource("territorial")
+curiosity = SubResource("curiosity")
