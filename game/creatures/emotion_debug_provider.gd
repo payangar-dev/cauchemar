@@ -16,6 +16,10 @@ extends Node
 
 signal changed
 
+# 10 Hz: fast enough that decay reads as continuous to the human eye, slow
+# enough that the panel rebuild cost stays negligible even with many tracked
+# entities. Tune up if the panel ever flickers; tune down if profiling shows
+# the rebuild dominating frame time.
 const MIN_INTERVAL_MSEC: int = 100
 
 var state: EmotionalState:

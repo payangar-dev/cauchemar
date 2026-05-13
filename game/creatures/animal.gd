@@ -12,5 +12,8 @@ extends StaticBody3D
 
 
 func _ready() -> void:
+	if not OS.is_debug_build():
+		_debug_provider.queue_free()
+		return
 	add_to_group(&"debug_inspectable")
 	_debug_provider.state = emotions

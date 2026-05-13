@@ -5,6 +5,7 @@
 
 [sub_resource type="Resource" id="anger"]
 script = ExtResource("2_config")
+initial = 40.0
 decay_rate = 5.0
 
 [sub_resource type="Resource" id="curiosity"]
@@ -30,6 +31,7 @@ decay_rate = 2.0
 
 [sub_resource type="Resource" id="territorial"]
 script = ExtResource("2_config")
+initial = 60.0
 decay_rate = 2.0
 
 [resource]

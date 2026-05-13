@@ -9,6 +9,11 @@ extends CanvasLayer
 ##
 ## Works with whichever Camera3D is currently active (player FPS, debug
 ## freecam, sandbox fixed cam) — DebugHud has no opinion on camera ownership.
+##
+## Stripped from release builds: the whole autoload self-frees when
+## `OS.is_debug_build()` is false, so a packaged build never exposes
+## per-entity state to the player (see CLAUDE.md rule #7 — knowledge is
+## always incomplete).
 
 signal toggled(active: bool)
 signal target_changed(target: Node3D)
@@ -34,6 +39,9 @@ var current_target: Node3D = null
 
 
 func _ready() -> void:
+	if not OS.is_debug_build():
+		queue_free()
+		return
 	_marker.visible = active
 
 
