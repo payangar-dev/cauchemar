@@ -1,0 +1,19 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://debug/debug_panel.gd" id="1_script"]
+
+[node name="DebugPanel" type="PanelContainer"]
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 360.0
+offset_bottom = 240.0
+script = ExtResource("1_script")
+
+[node name="Margin" type="MarginContainer" parent="."]
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 6
+
+[node name="Label" type="Label" parent="Margin"]
+text = ""

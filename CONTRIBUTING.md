@@ -107,6 +107,28 @@ Examples:
 - The PR title is the commit message on `main` — double-check it before squashing.
 - Delete the branch after merge.
 
+## Local formatting (recommended)
+
+The repo uses [`gdformat`](https://github.com/Scony/godot-gdscript-toolkit) and `gdlint` (both from gdtoolkit). The CI rejects any PR whose `.gd` files are not formatted or fail lint. Setting up the pre-commit hook locally means you never have to think about it.
+
+The toolchain is wired through [`uv`](https://docs.astral.sh/uv/), so the only prerequisite is `uv` itself.
+
+```bash
+# Once on your machine — installs pre-commit globally, managed by uv:
+uv tool install pre-commit --with pre-commit-uv
+
+# Once per repo clone — installs the git hook:
+pre-commit install
+```
+
+From then on, `gdformat` and `gdlint` run on staged `.gd` files at every `git commit`. If formatting changes a file, the commit is aborted and you need to `git add` the formatted result and recommit.
+
+To run the checks manually without committing:
+
+```bash
+pre-commit run --all-files
+```
+
 ## Checklist before requesting review
 
 - [ ] Branch name follows the convention.

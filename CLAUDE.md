@@ -64,6 +64,12 @@ Toute la documentation de design du jeu se trouve dans `docs/`. Voici la structu
 - `docs/09_design_sonore.md` — Sons honnêtes uniquement, ambiance vs gameplay, son spatial, bruit du joueur, son comme outil de survie
 - `docs/10_ui_hud.md` — UI diégétique sur la visière, minimalisme, états de la visière (perturbée/endommagée/détruite), sac à dos physique abandonnable, bip de localisation
 
+## Qualité du code GDScript
+
+- Le formatage et le linting GDScript sont gérés par **gdtoolkit** (`gdformat` + `gdlint`), exécutés automatiquement à chaque commit via le hook **pre-commit** (`.pre-commit-config.yaml`).
+- La même chaîne est rejouée en CI (`.github/workflows/ci.yml`) sur chaque PR.
+- **Ne pas tenter d'installer gdtoolkit, Python ou pipx en local** pour valider manuellement : le hook s'en charge au moment du commit, et la CI confirme.
+
 ## Conventions de la documentation
 
 - Chaque document suit la structure : Résumé → Principes de design → Description détaillée → Interactions → Points ouverts

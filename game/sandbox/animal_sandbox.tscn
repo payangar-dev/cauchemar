@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://b81ioclp1rqhl"]
+
+[ext_resource type="PackedScene" path="res://creatures/animal.tscn" id="1_animal"]
+[ext_resource type="Resource" uid="uid://xq5ets61k8cr" path="res://sandbox/example_species.tres" id="2_species"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ground"]
+size = Vector2(20, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ground"]
+albedo_color = Color(0.25, 0.25, 0.25, 1)
+
+[node name="AnimalSandbox" type="Node3D" unique_id=877585302]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=167538673]
+transform = Transform3D(1, 0, 0, 0, 0.8760009, 0.4823095, 0, -0.4823095, 0.8760009, 0, 3, 4.66207)
+current = true
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=882415652]
+transform = Transform3D(1, 0, 0, 0, 0.707, -0.707, 0, 0.707, 0.707, 0, 5, 0)
+shadow_enabled = true
+
+[node name="Ground" type="MeshInstance3D" parent="." unique_id=1477159138]
+mesh = SubResource("PlaneMesh_ground")
+surface_material_override/0 = SubResource("StandardMaterial3D_ground")
+
+[node name="Animal" parent="." unique_id=357198036 instance=ExtResource("1_animal")]
+
+[node name="EmotionalState" parent="Animal" index="2"]
+profile = ExtResource("2_species")
+
+[editable path="Animal"]

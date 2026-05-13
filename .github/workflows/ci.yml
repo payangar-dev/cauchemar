@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  static-checks:
+    name: GDScript static checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install gdtoolkit
+        uses: Scony/godot-gdscript-toolkit@master
+
+      - name: Format check
+        run: gdformat --diff game/
+
+      - name: Lint
+        run: gdlint game/
