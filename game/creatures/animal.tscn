@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://bu5knxdestyov"]
+[gd_scene format=3 uid="uid://5yelb7aruq5k"]
 
-[ext_resource type="Script" uid="uid://c6m4lljvcaxnq" path="res://creatures/animal.gd" id="1_script"]
-[ext_resource type="Script" uid="uid://dooywkqr2vthn" path="res://creatures/emotional_state.gd" id="2_state"]
-[ext_resource type="Script" uid="uid://o0eec2x7snyo" path="res://creatures/emotion_debug_provider.gd" id="3_provider"]
+[ext_resource type="Script" path="res://creatures/animal.gd" id="1_script"]
+[ext_resource type="Script" path="res://creatures/emotional_state.gd" id="2_state"]
+[ext_resource type="Script" path="res://creatures/emotion_debug_provider.gd" id="3_provider"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_1"]
 radius = 0.3

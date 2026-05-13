@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b81ioclp1rqhl"]
+[gd_scene format=3 uid="uid://ds58rwuqdop0b"]
 
 [ext_resource type="PackedScene" path="res://creatures/animal.tscn" id="1_animal"]
 [ext_resource type="Resource" uid="uid://xq5ets61k8cr" path="res://sandbox/example_species.tres" id="2_species"]
@@ -25,7 +25,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ground")
 
 [node name="Animal" parent="." unique_id=357198036 instance=ExtResource("1_animal")]
 
-[node name="EmotionalState" parent="Animal" index="2"]
+[node name="EmotionalState" parent="Animal" index="2" unique_id=2114112201]
 profile = ExtResource("2_species")
 
 [editable path="Animal"]
