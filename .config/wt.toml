@@ -1,0 +1,5 @@
+# Copie en arrière-plan les fichiers gitignorés (settings.json, cache .godot/, etc.)
+# du worktree source vers le worktree nouvellement créé.
+# Premier `wt switch --create` demandera une approbation pour cette commande.
+[post-start]
+copy-ignored = "wt step copy-ignored"
