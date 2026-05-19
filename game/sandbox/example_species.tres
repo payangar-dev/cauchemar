@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="SpeciesProfile" format=3 uid="uid://xq5ets61k8cr"]
 
-[ext_resource type="Script" path="res://creatures/species_profile.gd" id="1_profile"]
-[ext_resource type="Script" path="res://creatures/emotion_config.gd" id="2_config"]
+[ext_resource type="Script" uid="uid://dwpgd7sovd60q" path="res://creatures/species_profile.gd" id="1_profile"]
+[ext_resource type="Script" uid="uid://b32wmwnm7j8ww" path="res://creatures/emotion_config.gd" id="2_config"]
 
 [sub_resource type="Resource" id="anger"]
 script = ExtResource("2_config")
