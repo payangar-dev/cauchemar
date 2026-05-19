@@ -129,6 +129,31 @@ To run the checks manually without committing:
 pre-commit run --all-files
 ```
 
+## Local environment variables
+
+Some tooling needs to know where Godot is installed on your machine. Since that path is per-developer, we keep it out of the repo and rely on a single user-level environment variable: `GODOT_PATH`.
+
+Set it once on Windows from PowerShell:
+
+```powershell
+setx GODOT_PATH "C:\Program Files\Godot\Godot_v4.x-stable_win64.exe"
+```
+
+`setx` writes to the user registry and persists across sessions, but it does **not** affect the shell that ran it. Open a new terminal, and restart VSCode and Claude Code, for the change to be picked up.
+
+What reads `GODOT_PATH`:
+
+- `.mcp.json` resolves `${GODOT_PATH}` and passes it to the Godot MCP server.
+- `.vscode/settings.json` resolves `${env:GODOT_PATH}` to configure the `godot-tools` extension.
+
+If the variable is missing, the MCP server logs a warning and falls back to auto-detection, and the VSCode extension reports that it cannot find the Godot binary.
+
+To remove the variable later:
+
+```powershell
+[Environment]::SetEnvironmentVariable("GODOT_PATH", $null, "User")
+```
+
 ## Checklist before requesting review
 
 - [ ] Branch name follows the convention.
